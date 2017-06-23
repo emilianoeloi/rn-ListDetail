@@ -51,7 +51,7 @@ exports.oauth = functions.https.onRequest((req, res) => {
 exports.southAmerica = functions.https.onRequest((req, res) => {
     const countries = [
       {
-        id: 'ARG',
+        key: 'ARG',
         name: 'Argentina',
         area: 2791810,
         population: 39745613,
@@ -61,7 +61,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: '50_Pesos_(AR)_Islas_Malvinas.jpeg'
       },
       {
-        id: 'ABW',
+        key: 'ABW',
         name: 'Aruba',
         area: 193,
         population: 102695,
@@ -71,7 +71,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Aruban_10_florin_banknote_front.jpg'
       },
       {
-        id: 'BOL',
+        key: 'BOL',
         name: 'Bolivia',
         area: 1098581,
         population: 9627269,
@@ -81,7 +81,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'BOL0207bo.jpg'
       },
       {
-        id: 'BON',
+        key: '001',
         name: 'Bonaire',
         area: 294,
         population: 15800,
@@ -91,7 +91,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'New100back.jpg'
       },
       {
-        id: 'BRA',
+        key: 'BRA',
         name: 'Brasil',
         area: 8515767,
         population: 200104749,
@@ -101,7 +101,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Newreal.jpeg'
       },
       {
-        id: 'CHL',
+        key: 'CHL',
         name: 'Chile',
         area: 756950,
         population: 16598074,
@@ -111,7 +111,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Chilean_notes.jpg'
       },
       {
-        id: 'COL',
+        key: 'COL',
         name: 'Colombia',
         area: 1141748,
         population: 44379598,
@@ -121,7 +121,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Billete_de_100_mil_pesos_colombianos_anverso.png'
       },
       {
-        id: 'CUW',
+        key: 'CUW',
         name: 'Curacao',
         area: 444,
         population: 142180,
@@ -131,7 +131,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: '100-guilder_bill_(Netherlands_Antilles).jpg'
       },
       {
-        id: 'ECU',
+        key: 'ECU',
         name: 'Equador',
         area: 256370,
         population: 13810000,
@@ -141,7 +141,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: '50_USD_Series_2004_Note_Back.jpg'
       },
       {
-        id: 'GUY',
+        key: 'GUY',
         name: 'Guyana',
         area: 214970,
         population: 751000,
@@ -151,17 +151,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'GYDnotes.png'
       },
       {
-        id: 'GUY',
-        name: 'Guyana',
-        area: 214970,
-        population: 751000,
-        capital: 'Georgetown',
-        dependentTerritory: false,
-        municipalityTerritory: false,
-        currencySample: 'GYDnotes.png'
-      },
-      {
-        id: 'GFR',
+        key: '002',
         name: 'Guyana Francesa',
         area: 86504,
         population: 209000,
@@ -171,7 +161,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: ''
       },
       {
-        id: 'FLK',
+        key: 'FLK',
         name: 'Ilhas Malvinas',
         area: 12200,
         population: 3060,
@@ -181,7 +171,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Falklands_£2.png'
       },
       {
-        id: '003',
+        key: '003',
         name: 'Ilhas da Geórgia do Sul',
         area: 4057,
         population: 100,
@@ -191,7 +181,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Bank_of_England_£5_reverse.jpg'
       },
       {
-        id: 'PRY',
+        key: 'PRY',
         name: 'Paraguay',
         area: 406750,
         population: 6100000,
@@ -201,7 +191,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Anverso10000.png'
       },
       {
-        id: 'PER',
+        key: 'PER',
         name: 'Peru',
         area: 1285220,
         population: 28674757,
@@ -211,7 +201,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'Coin_Peru_1_Nuevo_Sol.jpg'
       },
       {
-        id: 'SUR',
+        key: 'SUR',
         name: 'Suriname',
         area: 163270,
         population: 470000,
@@ -221,7 +211,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: '20surinamedollar.jpg'
       },
       {
-        id: 'URY',
+        key: 'URY',
         name: 'Uruguay',
         area: 916445,
         population: 27934783,
@@ -231,7 +221,7 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         currencySample: 'URU0092o.jpg'
       },
       {
-        id: 'VEN',
+        key: 'VEN',
         name: 'Venezuela',
         area: 176220,
         population: 3399237,
