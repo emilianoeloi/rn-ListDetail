@@ -10,51 +10,64 @@ import {
 import InViewPort from './inViewPort';
 import styles from './styles';
 
+let ODD = true;
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       version: '1.0.0',
       name: 'ListDetail',
+      countryList: [],
     };
     this.checkVisibility = this.checkVisibility.bind(this);
+    this.loadCountries = this.loadCountries.bind(this);
   }
   checkVisibility(id, isVisible) {
     console.info('checkVisibility [' + id + '][' + isVisible + ']');
   }
+  loadCountries(error) {
+    fetch('https://us-central1-bodega-a35c0.cloudfunctions.net/southAmerica?_=002')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        const list = responseJson.map((country) => {
+          const o = ODD;
+          ODD = !ODD;
+          return {
+            ...country,
+            odd: o,
+          };
+        });
+        this.setState({
+          countryList: list
+        });
+      })
+      .catch((error) => error(error));
+  }
   render() {
+    this.loadCountries((e) => {
+      console.log('loadCountries', 'error', e)
+    });
     return (
       <View
         style={styles.container}
       >
         <FlatList
-          data={[
-            {key: 'row1'},
-            {key: 'row2'},
-            {key: 'row3'},
-            {key: 'row4'},
-            {key: 'row5'},
-            {key: 'row6'},
-            {key: 'row7'},
-            {key: 'row8'},
-            {key: 'row9'},
-            {key: 'row10'},
-            {key: 'row11'},
-            {key: 'row12'},
-            {key: 'row13'},
-            {key: 'row14'},
-            {key: 'row15'},
-            {key: 'row16'},
-            {key: 'row17'},
-            {key: 'row18'},
-          ]}
+          data={this.state.countryList}
           renderItem={({item}) => (
-            <InViewPort
-              id='item'
-              onChange={this.checkVisibility}
-            >
-              <Text style={styles.item}>Value: {item.key}</Text>
-            </InViewPort>
+            <View style={[styles.item, item.odd ? styles.odd : null]}>
+              <View style={[styles.box, styles.keyBox]}>
+                <Text style={styles.keyText}>{item.key}</Text>
+              </View>
+              <View style={[styles.box, styles.dataBox]}>
+                <View style={styles.names}>
+                  <Text style={styles.namesText}>{item.name}</Text>
+                </View>
+                <View style={styles.names}>
+                  <Text style={styles.namesText}>{item.capital}</Text>
+                </View>
+              </View>
+            </View>
           )}
         />
         <Text
