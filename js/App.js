@@ -6,14 +6,32 @@ import {
   Text,
   Image,
   FlatList,
+  TouchableHighlight
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
 import InViewPort from './inViewPort';
 import styles from './styles';
 
 let ODD = true;
 
-class App extends Component {
+class CountryScreen extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.state.params.country.name,
+  });
+  render() {
+    const { params } = this.props.navigation.state;
+    return (
+      <View style={styles.container}>
+        <Text>
+          {params.country.name}
+        </Text>
+      </View>
+    );
+  }
+}
+
+class HomeScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -24,6 +42,9 @@ class App extends Component {
     this.checkVisibility = this.checkVisibility.bind(this);
     this.loadCountries = this.loadCountries.bind(this);
   }
+  static navigationOptions = {
+    title: 'South America',
+  };
   checkVisibility(id, isVisible) {
     console.info('checkVisibility [' + id + '][' + isVisible + ']');
   }
@@ -51,6 +72,7 @@ class App extends Component {
     this.loadCountries((e) => {
       console.log('loadCountries', 'error', e)
     });
+    const { navigate } = this.props.navigation;
     return (
       <View
         style={styles.container}
@@ -58,25 +80,33 @@ class App extends Component {
         <FlatList
           data={this.state.countryList}
           renderItem={({item}) => (
-            <View style={[styles.item, item.odd ? styles.odd : null]}>
-              <View style={[styles.box, styles.keyBox, styles.relative]}>
-                <Image
-                  style={[styles.keyFlag, styles.absolute]}
-                  source={{uri: item.flagUri}}
-                />
-                <View style={styles.absolute}>
-                  <Text style={styles.keyText}>{item.key}</Text>
+            <TouchableHighlight
+              onPress={() => {
+                navigate('Country', {
+                  country: item,
+                });
+              }}
+            >
+              <View style={[styles.item, item.odd ? styles.odd : null]}>
+                <View style={[styles.box, styles.keyBox, styles.relative]}>
+                  <Image
+                    style={[styles.keyFlag, styles.absolute]}
+                    source={{uri: item.flagUri}}
+                  />
+                  <View style={styles.absolute}>
+                    <Text style={styles.keyText}>{item.key}</Text>
+                  </View>
+                </View>
+                <View style={[styles.box, styles.dataBox]}>
+                  <View style={styles.names}>
+                    <Text style={styles.namesText}>{item.name}</Text>
+                  </View>
+                  <View style={styles.names}>
+                    <Text style={styles.namesText}>{item.capital}</Text>
+                  </View>
                 </View>
               </View>
-              <View style={[styles.box, styles.dataBox]}>
-                <View style={styles.names}>
-                  <Text style={styles.namesText}>{item.name}</Text>
-                </View>
-                <View style={styles.names}>
-                  <Text style={styles.namesText}>{item.capital}</Text>
-                </View>
-              </View>
-            </View>
+            </TouchableHighlight>
           )}
         />
         <Text
@@ -85,8 +115,14 @@ class App extends Component {
           {this.state.version}
         </Text>
       </View>
+
     );
   }
 }
+
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  Country: { screen: CountryScreen },
+});
 
 export default App;
