@@ -58,7 +58,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Buenos Aires',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: '50_Pesos_(AR)_Islas_Malvinas.jpeg'
+        currencySample: '50_Pesos_(AR)_Islas_Malvinas.jpeg',
+        flag: '73_bandeira_argentina_2000px.png'
       },
       {
         key: 'ABW',
@@ -68,7 +69,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Oranjestad',
         dependentTerritory: true,
         municipalityTerritory: false,
-        currencySample: 'Aruban_10_florin_banknote_front.jpg'
+        currencySample: 'Aruban_10_florin_banknote_front.jpg',
+        flag: 'aruba.png'
       },
       {
         key: 'BOL',
@@ -78,7 +80,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'La Paz',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'BOL0207bo.jpg'
+        currencySample: 'BOL0207bo.jpg',
+        flag: '86_download_3.png'
       },
       {
         key: '001',
@@ -88,7 +91,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Kralendijk',
         dependentTerritory: false,
         municipalityTerritory: true,
-        currencySample: 'New100back.jpg'
+        currencySample: 'New100back.jpg',
+        flag: 'Bonaire_Icon.svg.png'
       },
       {
         key: 'BRA',
@@ -98,7 +102,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Brasília',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'Newreal.jpeg'
+        currencySample: 'Newreal.jpeg',
+        flag: 'bandeira_do_brasil_thumb[3].png'
       },
       {
         key: 'CHL',
@@ -108,7 +113,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Santiago',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'Chilean_notes.jpg'
+        currencySample: 'Chilean_notes.jpg',
+        flag: '98_bandeira_do_chile.png'
       },
       {
         key: 'COL',
@@ -118,7 +124,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Bogota',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'Billete_de_100_mil_pesos_colombianos_anverso.png'
+        currencySample: 'Billete_de_100_mil_pesos_colombianos_anverso.png',
+        flag: '99_2da32225a0e12610f46b.png'
       },
       {
         key: 'CUW',
@@ -128,7 +135,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Willemstad',
         dependentTerritory: true,
         municipalityTerritory: false,
-        currencySample: '100-guilder_bill_(Netherlands_Antilles).jpg'
+        currencySample: '100-guilder_bill_(Netherlands_Antilles).jpg',
+        flag: 'Curaçao_Icon.svg.png'
       },
       {
         key: 'ECU',
@@ -138,7 +146,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Quito',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: '50_USD_Series_2004_Note_Back.jpg'
+        currencySample: '50_USD_Series_2004_Note_Back.jpg',
+        flag: 'National_Standard_of_Ecuador.svg.png'
       },
       {
         key: 'GUY',
@@ -148,7 +157,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Georgetown',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'GYDnotes.png'
+        currencySample: 'GYDnotes.png',
+        flag: 'Bandera-Guyana.png'
       },
       {
         key: '002',
@@ -158,7 +168,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Caiena',
         dependentTerritory: false,
         municipalityTerritory: true,
-        currencySample: ''
+        currencySample: '',
+        flag: '133_french_guiana.png'
       },
       {
         key: 'FLK',
@@ -168,7 +179,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Port Stanley',
         dependentTerritory: true,
         municipalityTerritory: false,
-        currencySample: 'Falklands_£2.png'
+        currencySample: 'Falklands_£2.png',
+        flag: 'falkland-islands.png'
       },
       {
         key: '003',
@@ -178,7 +190,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Ponto Rei Eduardo',
         dependentTerritory: true,
         municipalityTerritory: false,
-        currencySample: 'Bank_of_England_£5_reverse.jpg'
+        currencySample: 'Bank_of_England_£5_reverse.jpg',
+        flag: '120_fiji.png'
       },
       {
         key: 'PRY',
@@ -188,7 +201,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Assunção',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'Anverso10000.png'
+        currencySample: 'Anverso10000.png',
+        flag: 'py-240x240.png'
       },
       {
         key: 'PER',
@@ -198,7 +212,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Lima',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'Coin_Peru_1_Nuevo_Sol.jpg'
+        currencySample: 'Coin_Peru_1_Nuevo_Sol.jpg',
+        flag: 'Flag_of_Peru_1825-1950.svg_.png'
       },
       {
         key: 'SUR',
@@ -208,7 +223,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Paramaribo',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: '20surinamedollar.jpg'
+        currencySample: '20surinamedollar.jpg',
+        flag: '222_suriname.png'
       },
       {
         key: 'URY',
@@ -218,7 +234,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Caracas',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: 'URU0092o.jpg'
+        currencySample: 'URU0092o.jpg',
+        flag: 'uruguay-flag-240.jpg'
       },
       {
         key: 'VEN',
@@ -228,7 +245,8 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         capital: 'Montevidéo',
         dependentTerritory: false,
         municipalityTerritory: false,
-        currencySample: '1995_20_bolívares_Obverse.jpg'
+        currencySample: '1995_20_bolívares_Obverse.jpg',
+        flag: '248_download_13.png'
       },
     ];
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
