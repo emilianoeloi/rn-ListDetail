@@ -2,7 +2,10 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import commonStyles from '../styles';
+import {
+  theme,
+  commonStyles,
+} from '../styles';
 
 const styles = StyleSheet.create({
   ...commonStyles,

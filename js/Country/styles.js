@@ -2,7 +2,10 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import commonStyles from '../styles';
+import {
+  commonStyles,
+  theme,
+} from '../styles';
 
 const styles = StyleSheet.create({
   ...commonStyles,
@@ -13,7 +16,7 @@ const styles = StyleSheet.create({
   coverPlaceholder: {
     width: 320,
     height: 200,
-    backgroundColor: 'green',
+    backgroundColor: theme.primaryColor,
   },
   coverImage: {
     width: 320,

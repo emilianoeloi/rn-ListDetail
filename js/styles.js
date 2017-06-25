@@ -1,3 +1,7 @@
+const theme = {
+  primaryColor: 'yellow',
+};
+
 const commonStyles = {
   container: {
     flex: 1,
@@ -10,4 +14,7 @@ const commonStyles = {
   },
 };
 
-export default commonStyles;
+export {
+  commonStyles, 
+  theme,
+};

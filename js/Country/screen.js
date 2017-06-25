@@ -10,6 +10,10 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import {
+  theme,
+} from  '../styles';
+
 import styles from './styles';
 
 class CountryScreen extends Component {
@@ -20,9 +24,12 @@ class CountryScreen extends Component {
     const { params } = this.props.navigation.state;
     const { country } = params;
     const photoURI = `https://bodega-a35c0.firebaseapp.com/${country.key}/points/${country.pointsOfInterest[0].photo}`;
+    const theme = {
+      backgroundColor: country.colors[0],
+    };
     const featured = (
       <View style={[styles.cover, styles.relative]}>
-        <View style={[styles.coverPlaceholder, styles.absolute]} />
+        <View style={[styles.coverPlaceholder, styles.absolute, theme]} />
         <Image
           resizeMode='contain'
           style={[styles.coverImage, styles.absolute]}
