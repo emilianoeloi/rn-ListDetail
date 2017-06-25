@@ -1,10 +1,11 @@
 import {
   StyleSheet,
 } from 'react-native';
+
+import commonStyles from '../styles';
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  ...commonStyles,
   featured: {
     width: 320,
     height: 200

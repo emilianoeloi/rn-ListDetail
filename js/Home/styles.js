@@ -1,10 +1,11 @@
 import {
   StyleSheet,
 } from 'react-native';
+
+import commonStyles from '../styles';
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  ...commonStyles,
   item: {
     flex: 1,
     flexDirection: 'row',
@@ -12,12 +13,6 @@ const styles = StyleSheet.create({
   },
   box: {
     padding: 0,
-  },
-  relative: {
-    position: 'relative',
-  },
-  absolute: {
-    position: 'absolute',
   },
   keyFlag: {
     width: 120,
@@ -53,7 +48,7 @@ const styles = StyleSheet.create({
   },
   odd: {
     backgroundColor: '#f1f1f1',
-  }
+  },
 });
 
 export default styles;

@@ -6,6 +6,7 @@ import {
   Text,
   Image,
   FlatList,
+  ScrollView,
   TouchableHighlight
 } from 'react-native';
 
@@ -21,6 +22,7 @@ class CountryScreen extends Component {
     const photoURI = `https://bodega-a35c0.firebaseapp.com/${country.key}/points/${country.pointsOfInterest[0].photo}`;
     const featured = (
       <Image
+        resizeMode='contain'
         style={styles.featured}
         source={{
           uri: photoURI
@@ -29,12 +31,15 @@ class CountryScreen extends Component {
     )
     const json = JSON.stringify(country);
     return (
-      <View style={styles.container}>
-        {featured}
-        <Text>
-          {json}
-        </Text>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          {featured}
+          <Text>
+            {json}
+          </Text>
+          {featured}
+        </View>
+      </ScrollView>
     );
   }
 }
