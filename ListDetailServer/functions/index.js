@@ -59,7 +59,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: '50_Pesos_(AR)_Islas_Malvinas.jpeg',
-        flag: '73_bandeira_argentina_2000px.png'
+        flag: '73_bandeira_argentina_2000px.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Cataratas do Iguaçu',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Cataratas_do_Iguaçu',
+            photo: 'Iguacufromair.jpg'
+          }
+        ]
       },
       {
         key: 'ABW',
@@ -70,7 +78,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: true,
         municipalityTerritory: false,
         currencySample: 'Aruban_10_florin_banknote_front.jpg',
-        flag: 'aruba.png'
+        flag: 'aruba.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Farol California',
+            moreUrl: 'https://guia.melhoresdestinos.com.br/farol-california-aruba-83-1339-l.html',
+            photo: 'pqhmdhlc-1374775236-bg.jpg'
+          }
+        ]
       },
       {
         key: 'BOL',
@@ -81,7 +97,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'BOL0207bo.jpg',
-        flag: '86_download_3.png'
+        flag: '86_download_3.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Salar de Tunupa',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Salar_de_Uyuni',
+            photo: 'Salar_Uyuni_au01.jpg'
+          }
+        ]
       },
       {
         key: '001',
@@ -92,7 +116,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: true,
         currencySample: 'New100back.jpg',
-        flag: 'Bonaire_Icon.svg.png'
+        flag: 'Bonaire_Icon.svg.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Ilha ABC',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Ilhas_ABC',
+            photo: 'img_2809.jpg'
+          }
+        ]
       },
       {
         key: 'BRA',
@@ -103,7 +135,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'Newreal.jpeg',
-        flag: 'bandeira_do_brasil_thumb[3].png'
+        flag: 'bandeira_do_brasil_thumb[3].png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Cristo Redentor',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Cristo_Redentor',
+            photo: 'Cristo_Redentor_-_Rio_de_Janeiro,_Brasil-crop.jpg'
+          }
+        ]
       },
       {
         key: 'CHL',
@@ -114,7 +154,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'Chilean_notes.jpg',
-        flag: '98_bandeira_do_chile.png'
+        flag: '98_bandeira_do_chile.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Parque Nacional Torres del Paine',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Parque_Nacional_Torres_del_Paine',
+            photo: 'Torres_del_Paine_cropped.jpg'
+          }
+        ]
       },
       {
         key: 'COL',
@@ -125,7 +173,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'Billete_de_100_mil_pesos_colombianos_anverso.png',
-        flag: '99_2da32225a0e12610f46b.png'
+        flag: '99_2da32225a0e12610f46b.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Museu do Ouro',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Museu_do_Ouro_(Bogotá)',
+            photo: 'Muisca_raft_Legend_of_El_Dorado_Offerings_of_gold.jpg'
+          }
+        ]
       },
       {
         key: 'CUW',
@@ -136,7 +192,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: true,
         municipalityTerritory: false,
         currencySample: '100-guilder_bill_(Netherlands_Antilles).jpg',
-        flag: 'Curaçao_Icon.svg.png'
+        flag: 'Curaçao_Icon.svg.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Klein Curaçao',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Klein_Curaçao',
+            photo: 'Klein_curacao_lighthouse_areal.jpg'
+          }
+        ]
       },
       {
         key: 'ECU',
@@ -147,7 +211,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: '50_USD_Series_2004_Note_Back.jpg',
-        flag: 'National_Standard_of_Ecuador.svg.png'
+        flag: 'National_Standard_of_Ecuador.svg.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Cotopaxi',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Cotopaxi',
+            photo: 'Cotopaxi_mini.jpg'
+          }
+        ]
       },
       {
         key: 'GUY',
@@ -158,7 +230,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'GYDnotes.png',
-        flag: 'Bandera-Guyana.png'
+        flag: 'Bandera-Guyana.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Cataratas de Kaieteur',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Cataratas_de_Kaieteur',
+            photo: 'GuyanaKaieteurFalls2004.jpg'
+          }
+        ]
       },
       {
         key: '002',
@@ -169,7 +249,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: true,
         currencySample: '',
-        flag: '133_french_guiana.png'
+        flag: '133_french_guiana.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Place des Palmistes',
+            moreUrl: 'https://fr.wikipedia.org/wiki/Place_des_Palmistes',
+            photo: 'place2.jpg'
+          }
+        ]
       },
       {
         key: 'FLK',
@@ -180,7 +268,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: true,
         municipalityTerritory: false,
         currencySample: 'Falklands_£2.png',
-        flag: 'falkland-islands.png'
+        flag: 'falkland-islands.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Catedral de Stanley',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Catedral_de_Stanley',
+            photo: 'WhaleboneArchCathedral.jpg'
+          }
+        ]
       },
       {
         key: '003',
@@ -191,7 +287,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: true,
         municipalityTerritory: false,
         currencySample: 'Bank_of_England_£5_reverse.jpg',
-        flag: '120_fiji.png'
+        flag: '120_fiji.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Museu de Geórgia do Sul',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Museu_de_Geórgia_do_Sul',
+            photo: 'Grytviken_museum.jpg'
+          }
+        ]
       },
       {
         key: 'PRY',
@@ -202,7 +306,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'Anverso10000.png',
-        flag: 'py-240x240.png'
+        flag: 'py-240x240.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Museu Casa da Independência',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Museu_Casa_da_Independência',
+            photo: 'Asunción_-_Casa_de_la_Independencia.jpg'
+          }
+        ]
       },
       {
         key: 'PER',
@@ -213,7 +325,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'Coin_Peru_1_Nuevo_Sol.jpg',
-        flag: 'Flag_of_Peru_1825-1950.svg_.png'
+        flag: 'Flag_of_Peru_1825-1950.svg_.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Machu Picchu',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Machu_Picchu',
+            photo: 'Sunset_across_Machu_Picchu.jpg'
+          }
+        ]
       },
       {
         key: 'SUR',
@@ -224,7 +344,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: '20surinamedollar.jpg',
-        flag: '222_suriname.png'
+        flag: '222_suriname.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Parque Natural Brownsberg',
+            moreUrl: 'https://www.expedia.com.br/Parque-Natural-Brownsberg-Brownsweg.d6120888.Guia-de-Viagem',
+            photo: '220px-Leo_val_brownsberg.jpg'
+          }
+        ]
       },
       {
         key: 'URY',
@@ -235,7 +363,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: 'URU0092o.jpg',
-        flag: 'uruguay-flag-240.jpg'
+        flag: 'uruguay-flag-240.jpg',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Praça Independência',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Praça_Independência_(Montevidéu)',
+            photo: 'PlazaIndependencia2.jpg'
+          }
+        ]
       },
       {
         key: 'VEN',
@@ -246,7 +382,15 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         dependentTerritory: false,
         municipalityTerritory: false,
         currencySample: '1995_20_bolívares_Obverse.jpg',
-        flag: '248_download_13.png'
+        flag: '248_download_13.png',
+        pointsOfInterest: [
+          {
+            key: 0,
+            name: 'Salto Ángel',
+            moreUrl: 'https://pt.wikipedia.org/wiki/Salto_Ángel',
+            photo: '1200px-SaltoAngel4.jpg'
+          }
+        ]
       },
     ];
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
