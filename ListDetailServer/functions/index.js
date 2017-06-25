@@ -53,6 +53,10 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'ARG',
         name: 'Argentina',
+        colors: [
+          'lightblue',
+          'white',
+        ],
         area: 2791810,
         population: 39745613,
         capital: 'Buenos Aires',
@@ -72,6 +76,12 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'ABW',
         name: 'Aruba',
+        colors: [
+          '#4189dd',
+          '#f9d616',
+          '#d21034',
+          'white'
+        ],
         area: 193,
         population: 102695,
         capital: 'Oranjestad',
@@ -91,6 +101,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'BOL',
         name: 'Bolivia',
+        colors: [
+          '#D52B1E',
+          '#FCD116',
+          '#007934'
+        ],
         area: 1098581,
         population: 9627269,
         capital: 'La Paz',
@@ -110,6 +125,12 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: '001',
         name: 'Bonaire',
+        colors: [
+          'blue',
+          'red',
+          'white',
+          'yellow'
+        ],
         area: 294,
         population: 15800,
         capital: 'Kralendijk',
@@ -129,6 +150,12 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'BRA',
         name: 'Brasil',
+        colors: [
+          'green',
+          'yellow',
+          'blue',
+          'white'
+        ],
         area: 8515767,
         population: 200104749,
         capital: 'Brasília',
@@ -148,6 +175,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'CHL',
         name: 'Chile',
+        colors: [
+          'red',
+          'white',
+          'blue',
+        ],
         area: 756950,
         population: 16598074,
         capital: 'Santiago',
@@ -167,6 +199,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'COL',
         name: 'Colombia',
+        colors: [
+          '#FCD116',
+          '#003893',
+          '#CE1126',
+        ],
         area: 1141748,
         population: 44379598,
         capital: 'Bogota',
@@ -186,6 +223,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'CUW',
         name: 'Curacao',
+        colors: [
+          '#002b7f',
+          '#f9e814',
+          '#ffffff',
+        ],
         area: 444,
         population: 142180,
         capital: 'Willemstad',
@@ -205,6 +247,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'ECU',
         name: 'Equador',
+        colors: [
+          'red',
+          'blue',
+          'yellow',
+        ],
         area: 256370,
         population: 13810000,
         capital: 'Quito',
@@ -224,6 +271,13 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'GUY',
         name: 'Guyana',
+        colors: [
+          '#009e49',
+          '#fcd116',
+          '#ce1126',
+          'white',
+          'black'
+        ],
         area: 214970,
         population: 751000,
         capital: 'Georgetown',
@@ -243,6 +297,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: '002',
         name: 'Guyana Francesa',
+        colors: [
+          '#078930',
+          '#FCDD09',
+          '#DA121A',
+        ],
         area: 86504,
         population: 209000,
         capital: 'Caiena',
@@ -262,6 +321,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'FLK',
         name: 'Ilhas Malvinas',
+        colors: [
+          '#00247d',
+          '#cf142b',
+          'white',
+        ],
         area: 12200,
         population: 3060,
         capital: 'Port Stanley',
@@ -281,6 +345,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: '003',
         name: 'Ilhas da Geórgia do Sul',
+        colors: [
+          '#00247d',
+          '#cf142b',
+          'white',
+        ],
         area: 4057,
         population: 100,
         capital: 'Ponto Rei Eduardo',
@@ -300,6 +369,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'PRY',
         name: 'Paraguay',
+        colors: [
+          '#0038a8',
+          '#d52b1e',
+          'white',
+        ],
         area: 406750,
         population: 6100000,
         capital: 'Assunção',
@@ -319,6 +393,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'PER',
         name: 'Peru',
+        colors: [
+          '#d91023',
+          '#00a854',
+          'white',
+        ],
         area: 1285220,
         population: 28674757,
         capital: 'Lima',
@@ -338,6 +417,12 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'SUR',
         name: 'Suriname',
+        colors: [
+          '#377e3f',
+          '#b40a2d',
+          '#ecc81d',
+          'white',
+        ],
         area: 163270,
         population: 470000,
         capital: 'Paramaribo',
@@ -357,6 +442,11 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'URY',
         name: 'Uruguay',
+        colors: [
+          '#0038a8',
+          '#fcd116',
+          'white',
+        ],
         area: 916445,
         population: 27934783,
         capital: 'Caracas',
@@ -376,6 +466,12 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
       {
         key: 'VEN',
         name: 'Venezuela',
+        colors: [
+          '#cf142b',
+          '#00247d',
+          '#ffcc00',
+          'white',
+        ],
         area: 176220,
         population: 3399237,
         capital: 'Montevidéo',

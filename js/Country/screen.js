@@ -21,13 +21,16 @@ class CountryScreen extends Component {
     const { country } = params;
     const photoURI = `https://bodega-a35c0.firebaseapp.com/${country.key}/points/${country.pointsOfInterest[0].photo}`;
     const featured = (
-      <Image
-        resizeMode='contain'
-        style={styles.featured}
-        source={{
-          uri: photoURI
-        }}
-      />
+      <View style={[styles.cover, styles.relative]}>
+        <View style={[styles.coverPlaceholder, styles.absolute]} />
+        <Image
+          resizeMode='contain'
+          style={[styles.coverImage, styles.absolute]}
+          source={{
+            uri: photoURI
+          }}
+        />
+      </View>
     )
     const json = JSON.stringify(country);
     return (
