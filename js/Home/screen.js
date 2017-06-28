@@ -3,11 +3,19 @@ import React, {
 } from 'react';
 import {
   View,
-  Text,
   Image,
   FlatList,
   TouchableHighlight
 } from 'react-native';
+import {
+  Thumbnail,
+  Body,
+  Container,
+  Content,
+  List,
+  ListItem,
+  Text,
+} from 'native-base';
 import { StackNavigator } from 'react-navigation';
 
 import CountryScreen from '../Country/screen';
@@ -30,7 +38,7 @@ class HomeScreen extends Component {
     title: 'South America',
   };
   loadCountries(error) {
-    fetch('https://us-central1-bodega-a35c0.cloudfunctions.net/southAmerica?_=002')
+    fetch('https://us-central1-bodega-a35c0.cloudfunctions.net/southAmerica?_=003')
       .then((response) => response.json())
       .then((responseJson) => {
         const list = responseJson.map((country) => {
@@ -54,50 +62,32 @@ class HomeScreen extends Component {
       console.log('loadCountries', 'error', e)
     });
     const { navigate } = this.props.navigation;
+
     return (
-      <View
-        style={styles.container}
-      >
-        <FlatList
-          data={this.state.countryList}
-          renderItem={({item}) => (
-            <TouchableHighlight
-              onPress={() => {
+      <Container>
+        <Content>
+          <List
+            dataArray={this.state.countryList}
+            renderRow={(item) => (
+              <ListItem onPress={() => {
                 navigate('Country', {
                   country: item,
                 });
-              }}
-            >
-              <View style={[styles.item, item.odd ? styles.odd : null]}>
-                <View style={[styles.box, styles.keyBox, styles.relative]}>
-                  <Image
-                    style={[styles.keyFlag, styles.absolute]}
-                    source={{uri: item.flagUri}}
-                  />
-                  <View style={styles.absolute}>
-                    <Text style={styles.keyText}>{item.key}</Text>
-                  </View>
-                </View>
-                <View style={[styles.box, styles.dataBox]}>
-                  <View style={styles.names}>
-                    <Text style={styles.namesText}>{item.name}</Text>
-                  </View>
-                  <View style={styles.names}>
-                    <Text style={styles.namesText}>{item.capital}</Text>
-                  </View>
-                </View>
-              </View>
-            </TouchableHighlight>
-          )}
-        />
-        <Text
-          style={styles.appVersion}
-        >
-          {this.state.version}
-        </Text>
-      </View>
-
+              }}>
+                <Thumbnail square size={80} source={{uri: item.flagUri}} />
+                <Body>
+                  <Text>{item.key}</Text>
+                  <Text>{item.name}</Text>
+                  <Text note>{item.capital}</Text>
+                </Body>
+              </ListItem>
+            )}
+          >
+          </List>
+        </Content>
+      </Container>
     );
+
   }
 }
 
