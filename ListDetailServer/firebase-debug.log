@@ -1,0 +1,96 @@
+[debug] [2017-06-30T02:27:10.652Z] ----------------------------------------------------------------------
+[debug] [2017-06-30T02:27:10.659Z] Command:      /Users/emiliano/.nvm/versions/node/v7.10.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-06-30T02:27:10.660Z] CLI Version:  3.9.1
+[debug] [2017-06-30T02:27:10.660Z] Platform:     darwin
+[debug] [2017-06-30T02:27:10.660Z] Node Version: v7.10.0
+[debug] [2017-06-30T02:27:10.661Z] Time:         Thu Jun 29 2017 23:27:10 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:10.661Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-30T02:27:10.676Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-30T02:27:10.677Z] > authorizing via signed-in user
+[debug] [2017-06-30T02:27:10.680Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/bodega-a35c0  
+ Thu Jun 29 2017 23:27:10 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:12.156Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-30T02:27:12.158Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/bodega-a35c0/tokens  
+ Thu Jun 29 2017 23:27:12 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:13.058Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'bodega-a35c0'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-06-30T02:27:14.874Z] > [functions] package.json contents: {
+  "name": "big-ben-functions",
+  "description": "A simple endpoint that returns a number of 'BONG' based on the time of day",
+  "dependencies": {
+    "firebase-admin": "^4.2.1",
+    "firebase-functions": "^0.5.5"
+  }
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-06-30T02:27:14.876Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/bodega-a35c0?view=CONSUMER_VIEW  
+ Thu Jun 29 2017 23:27:14 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:14.877Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/bodega-a35c0?view=CONSUMER_VIEW  
+ Thu Jun 29 2017 23:27:14 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:16.346Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-06-30T02:27:16.359Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-06-30T02:27:16.361Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/bodega-a35c0  
+ Thu Jun 29 2017 23:27:16 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:16.362Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/bodega-a35c0/apiKeys  
+ Thu Jun 29 2017 23:27:16 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:17.179Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-30T02:27:17.428Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-06-30T02:27:18.618Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/bodega-a35c0/configs  
+ Thu Jun 29 2017 23:27:18 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:19.624Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (9.81 KB) for uploading
+[debug] [2017-06-30T02:27:21.129Z] >>> HTTP REQUEST GET https://www.googleapis.com/storage/v1/b/staging.bodega-a35c0.appspot.com  
+ Thu Jun 29 2017 23:27:21 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:21.974Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-30T02:27:21.975Z] >>> HTTP REQUEST POST https://www.googleapis.com/upload/storage/v1/b/staging.bodega-a35c0.appspot.com/o?uploadType=media&name=firebase-functions-source ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 10048,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: '/var/folders/jp/njndjtk93zn4xz2sb_tpy1540000gp/T/firebase-functions-487408ubDLJnXVSn.zip',
+  fd: 19,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: undefined,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 10048 } 
+ Thu Jun 29 2017 23:27:21 GMT-0300 (-03)
+[debug] [2017-06-30T02:27:23.195Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[info] i  hosting: preparing public directory for upload...
+[debug] [2017-06-30T02:27:27.627Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/bodega-a35c0/uploads/-Knqoinuk5gCuf-1KjXO?fileCount=72&message=  
+ Thu Jun 29 2017 23:27:27 GMT-0300 (-03)
