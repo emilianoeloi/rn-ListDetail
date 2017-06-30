@@ -15,6 +15,12 @@ import {
   List,
   ListItem,
   Text,
+  Header,
+  Left,
+  Button,
+  Title,
+  Right,
+  Icon,
 } from 'native-base';
 import { StackNavigator } from 'react-navigation';
 
@@ -35,7 +41,6 @@ class HomeScreen extends Component {
     this.loadCountries = this.loadCountries.bind(this);
   }
   static navigationOptions = {
-    title: 'South America',
   };
   loadCountries(error) {
     fetch('https://us-central1-bodega-a35c0.cloudfunctions.net/southAmerica?_=003')
@@ -65,6 +70,11 @@ class HomeScreen extends Component {
 
     return (
       <Container>
+        <Header>
+          <Body>
+            <Title>South America</Title>
+          </Body>
+        </Header>
         <Content>
           <List
             dataArray={this.state.countryList}

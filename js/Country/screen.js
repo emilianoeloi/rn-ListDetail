@@ -7,8 +7,21 @@ import {
   Image,
   FlatList,
   ScrollView,
-  TouchableHighlight
+  TouchableHighlight,
 } from 'react-native';
+import {
+  Card,
+  CardItem,
+  Container,
+  Content,
+  Body,
+  Header,
+  Left,
+  Button,
+  Title,
+  Right,
+  Icon,
+} from 'native-base';
 
 import {
   theme,
@@ -17,10 +30,8 @@ import {
 import styles from './styles';
 
 class CountryScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: navigation.state.params.country.name,
-  });
   render() {
+    const {goBack} = this.props.navigation;
     const { params } = this.props.navigation.state;
     const { country } = params;
     const photoURI = `https://bodega-a35c0.firebaseapp.com/${country.key}/points/${country.pointsOfInterest[0].photo}`;
@@ -41,15 +52,35 @@ class CountryScreen extends Component {
     )
     const json = JSON.stringify(country);
     return (
-      <ScrollView>
-        <View style={styles.container}>
-          {featured}
-          <Text>
-            {json}
-          </Text>
-          {featured}
-        </View>
-      </ScrollView>
+      <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name='arrow-back' onPress={() => goBack()} />
+            </Button>
+          </Left>
+          <Body>
+            <Title>{country.name}</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content>
+          <Card>
+            <CardItem header>
+              <Text>
+                Geography
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Body>
+                <Text>
+                  {country.geography}
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }
