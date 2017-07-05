@@ -484,7 +484,6 @@ exports.southAmerica = functions.https.onRequest((req, res) => {
         key: 'VEN',
         name: 'Venezuela',
         geography: 'Venezuela, country located at the northern end of South America. It occupies a roughly triangular area that is larger than the combined areas of France and Germany. Venezuela is bounded by the Caribbean Sea and the Atlantic Ocean to the north, Guyana to the east, Brazil to the south, and Colombia to the southwest and west. The national capital, Caracas, is Venezuela’s primary centre of industry, commerce, education, and tourism.',
-        geography: '',
         colors: [
           '#cf142b',
           '#00247d',
